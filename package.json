@@ -1,0 +1,33 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.0",
+    "del-cli": "^0.2.1",
+    "html-webpack-plugin": "^2.28.0",
+    "style-loader": "^0.16.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "react": "^15.5.3",
+    "react-dom": "^15.5.3"
+  },
+  "scripts": {
+    "prebuild": "del-cli dist -f",
+    "build": "webpack",
+    "build-prod": "NODE_ENV=production node_modules/.bin/webpack –config ./webpack.config.prod.js --progress",
+    "execute": "node dist/bundle.js",
+    "//start": "npm run build -s && npm run execute -s",
+    "start": "node_modules/.bin/webpack-dev-server --open"
+  }
+}

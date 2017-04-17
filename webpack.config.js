@@ -1,10 +1,11 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
     //webpack
     devtool: 'eval-source-map',
-    entry: __dirname + '/src/main.js',
+    entry: __dirname + '/src/index.js',
     output: {
         path: __dirname + '/dist',
         filename: "bundle-[hash].js"
@@ -29,7 +30,8 @@ module.exports = {
             template: __dirname + "/src/index.tmpl.html"
         }),
         //new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.UglifyJsPlugin()
+        new webpack.optimize.UglifyJsPlugin(),
+        new OpenBrowserPlugin({ url: 'http://localhost:8080',browser:'chrome' })
     ],
     //webpack-dev-server
     devServer: {

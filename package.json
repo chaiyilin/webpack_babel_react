@@ -15,6 +15,7 @@
     "del-cli": "^0.2.1",
     "html-webpack-plugin": "^2.28.0",
     "open-browser-webpack-plugin": "^0.0.5",
+    "path": "^0.12.7",
     "style-loader": "^0.16.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.2"
@@ -23,15 +24,15 @@
     "antd": "^2.9.1",
     "lodash": "^4.17.4",
     "react": "^15.5.3",
-    "react-dock": "^0.2.3",
+    "react-dock": "https://github.com/chaiyilin/react-dock.git",
     "react-dom": "^15.5.3"
   },
   "scripts": {
     "prebuild": "del-cli dist -f",
     "build": "webpack",
-    "build-prod": "NODE_ENV=production node_modules/.bin/webpack –config ./webpack.config.prod.js --progress",
+    "build-prod": "set NODE_ENV=production node_modules/.bin/webpack –config ./webpack.config.prod.js --progress",
     "execute": "node dist/bundle.js",
     "//start": "npm run build -s && npm run execute -s",
-    "start": "node_modules/.bin/webpack-dev-server"
+    "start": "npm run build webpack-dev-server"
   }
 }

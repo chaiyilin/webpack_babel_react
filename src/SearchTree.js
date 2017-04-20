@@ -20,7 +20,8 @@ const getParentKey = (key, tree) => {
 };
 
 class SearchTree extends Component {
-    state = {
+    //https://medium.com/@joshblack/writing-a-react-component-in-es2015-a0b27e1ed50a
+    state={
         searchValue: '',
         autoExpandParent: true,
     };

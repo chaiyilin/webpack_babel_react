@@ -6,6 +6,7 @@
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.23.0",
@@ -33,6 +34,6 @@
     "build-prod": "set NODE_ENV=production node_modules/.bin/webpack –config ./webpack.config.prod.js --progress",
     "execute": "node dist/bundle.js",
     "//start": "npm run build -s && npm run execute -s",
-    "start": "webpack-dev-server"
+    "start": "npm run build && webpack-dev-server"
   }
 }

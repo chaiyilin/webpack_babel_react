@@ -28,7 +28,8 @@ module.exports = {
     plugins: [
         new webpack.BannerPlugin("Copyright Flying Unicorns inc."),
         new HtmlWebpackPlugin({
-            template: path.join(__dirname + "/src/index.tmpl.html")
+            template: path.join(__dirname + "/src/index.tmpl.html"),
+            favicon: 'favicon.ico'
         }),
         //new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin(),

@@ -33,6 +33,6 @@
     "build-prod": "set NODE_ENV=production node_modules/.bin/webpack –config ./webpack.config.prod.js --progress",
     "execute": "node dist/bundle.js",
     "//start": "npm run build -s && npm run execute -s",
-    "start": "npm run build webpack-dev-server"
+    "start": "webpack-dev-server"
   }
 }

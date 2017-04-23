@@ -1,6 +1,8 @@
 import {Tree, Input} from 'antd';
 import React, {Component} from 'react';
-import content from './content.js';
+import links from './links';
+import {Link} from 'react-router-dom'
+
 const TreeNode = Tree.TreeNode;
 const Search = Input.Search;
 
@@ -21,7 +23,7 @@ const getParentKey = (key, tree) => {
 
 class SearchTree extends Component {
     //https://medium.com/@joshblack/writing-a-react-component-in-es2015-a0b27e1ed50a
-    state={
+    state = {
         searchValue: '',
         autoExpandParent: true,
     };
@@ -33,9 +35,9 @@ class SearchTree extends Component {
     };
     onChange = (e) => {
         const value = e.target.value;
-        const expandedKeys = content.map((item, index, arr) => {
+        const expandedKeys = links.map((item, index, arr) => {
             if (item.title.indexOf(value) > -1) {
-                return getParentKey(item.key, content);
+                return getParentKey(item.key, links);
             }
             return null;
         }).filter((item, i, self) => item && self.indexOf(item) === i);
@@ -63,23 +65,26 @@ class SearchTree extends Component {
                 ) : <span>{item.title}</span>;
             if (item.children) {
                 return (
-                    <TreeNode title={title}>
+                    <TreeNode title={title} key={item.title}>
                         {loop(item.children)}
                     </TreeNode>
                 );
             }
-            return <TreeNode title={title}/>;
+            return (
+                <TreeNode title="" key={item.title}>
+                    <Link to={{pathname:'/' +item.example}}>{item.title}</Link>
+                </TreeNode>);
         });
         return (
             <div>
-                <Search style={{ width: 300 }} placeholder="Search" onChange={this.onChange}/>
-                <Tree
+                <Search style={{width: 300}} placeholder="Search" onChange={this.onChange}/>
+                {                <Tree
                     defaultExpandAll
                     onExpand={this.onExpand}
                     autoExpandParent={autoExpandParent}
                 >
-                    {loop(content)}
-                </Tree>
+                    {loop(links)}
+                </Tree>}
             </div>
         );
     }

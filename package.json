@@ -25,8 +25,9 @@
     "antd": "^2.9.1",
     "lodash": "^4.17.4",
     "react": "^15.5.3",
-    "react-dock": "https://github.com/chaiyilin/react-dock.git",
-    "react-dom": "^15.5.3"
+    "react-dock": "^0.2.4",
+    "react-dom": "^15.5.3",
+    "react-router-dom": "^4.1.1"
   },
   "scripts": {
     "prebuild": "del-cli dist -f",
@@ -34,6 +35,6 @@
     "build-prod": "set NODE_ENV=production node_modules/.bin/webpack –config ./webpack.config.prod.js --progress",
     "execute": "node dist/bundle.js",
     "//start": "npm run build -s && npm run execute -s",
-    "start": "npm run build && webpack-dev-server"
+    "start": "yarn install && npm run build && webpack-dev-server"
   }
 }

@@ -1,3 +1,5 @@
+//https://medium.com/@diamondgfx/learning-react-with-create-react-app-part-1-a12e1833fdc#.ah2yrvhqu
+
 import React, {Component} from 'react';
 import './HelloWorld.css';
 
@@ -5,18 +7,18 @@ class HelloWorld extends Component {
     constructor(props) {
         super(props);
         this.state = {greeting: 'Hello'};
-        //todo
-        this.frenchify = this.frenchify.bind(this);
-        this.removeGreeting = this.removeGreeting.bind(this);
-    }
+        /*        //todo
+         this.frenchify = this.frenchify.bind(this);
+         this.removeGreeting = this.removeGreeting.bind(this)*/
+    };
 
-    frenchify() {
+    frenchify = () => {
         this.setState({greeting: 'Bonjour'});
-    }
+    };
 
-    removeGreeting() {
+    removeGreeting = () => {
         this.props.removeGreeting(this.props.name);
-    }
+    };
 
     render() {
         return (

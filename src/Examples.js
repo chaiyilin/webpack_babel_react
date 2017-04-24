@@ -1,10 +1,10 @@
 import {Switch, Route} from 'react-router-dom'
 import React from 'react';
-import HelloWorld from './HelloWorld';
+import HelloWorldList from './HelloWorldList';
 
 const Examples = () => (
     <Switch>
-        <Route exact path='/HelloWorld' component={() => <HelloWorld name='a'/>}/>
+        <Route exact path='/HelloWorld' component={() => <HelloWorldList/>}/>
 
 
     </Switch>

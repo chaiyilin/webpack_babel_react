@@ -5,18 +5,16 @@ class AddGreeter extends Component {
     constructor(props) {
         super(props);
         this.state = {greetingName: ''};
-        this.handleUpdate = this.handleUpdate.bind(this);
-        //this.addGreeting = this.addGreeting.bind(this);
     }
 
-    handleUpdate(event) {
+    handleUpdate=(event)=> {
         this.setState({greetingName: event.target.value});
-    }
+    };
 
-    addGreeting() {
+    addGreeting=()=> {
         this.props.addGreeting(this.state.greetingName);
         this.setState({greetingName: ''});
-    }
+    };
 
 
     render() {

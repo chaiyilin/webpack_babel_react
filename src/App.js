@@ -12,12 +12,12 @@ const {Header, Footer, Sider, Content} = Layout;
 const App = () => {
     return (
         <div>
-            <div>
+{/*            <div>
                 <Dock position='left' isVisible={true}>
                     <SearchTree/>
 
                 </Dock>
-            </div>
+            </div>*/}
             {/*<SearchTree/>*/}
             <Examples/>
         </div>

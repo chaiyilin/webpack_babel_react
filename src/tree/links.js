@@ -8,7 +8,8 @@ export default
                 example:'HelloWorld'
             },
             {
-                title:'aaa',
+                title:'redux',
+                example:'Todo'
             }
         ]
     }

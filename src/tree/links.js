@@ -5,11 +5,15 @@ export default
         children:[
             {
                 title:'hello world',
-                example:'HelloWorld'
+                example:'helloWorld'
             },
             {
-                title:'redux',
-                example:'Todo'
+                title:'redux todo',
+                example:'todo'
+            },
+            {
+                title:'redux asyn',
+                example:'reduxAsyn'
             }
         ]
     }

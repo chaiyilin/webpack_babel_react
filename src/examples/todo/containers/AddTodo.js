@@ -15,6 +15,7 @@ let AddTodo = ({ dispatch }) => {
         dispatch(addTodo(input.value))
         input.value = ''
       }}>
+        {/*https://facebook.github.io/react/docs/refs-and-the-dom.html*/}
         <input ref={node => {
           input = node
         }} />
@@ -25,6 +26,5 @@ let AddTodo = ({ dispatch }) => {
     </div>
   )
 }
-AddTodo = connect()(AddTodo)
-
-export default AddTodo
+//AddTodo = connect()(AddTodo)
+export default connect()(AddTodo)

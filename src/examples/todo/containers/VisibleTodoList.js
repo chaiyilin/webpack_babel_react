@@ -23,6 +23,7 @@ const mapDispatchToProps = {
   onTodoClick: toggleTodo
 }
 
+//http://blog.isquaredsoftware.com/2016/10/idiomatic-redux-why-use-action-creators/
 const VisibleTodoList = connect(
   mapStateToProps,
   mapDispatchToProps

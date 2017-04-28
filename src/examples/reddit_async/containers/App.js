@@ -27,6 +27,7 @@ class App extends Component {
   }
 
   handleChange = nextReddit => {
+    //http://stackoverflow.com/questions/33221634/why-use-this-props-dispatch-rather-than-store-dispatch-directly-in-redux
     this.props.dispatch(selectReddit(nextReddit))
   }
 

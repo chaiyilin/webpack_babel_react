@@ -4,6 +4,7 @@ import App from './App';
 import './index.css';
 import 'antd/dist/antd.css';
 import {BrowserRouter} from 'react-router-dom'
+import 'babel-polyfill'
 
 ReactDOM.render(
     <BrowserRouter>

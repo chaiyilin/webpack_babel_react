@@ -10,6 +10,11 @@ describe(HelloWorldList, () => {
     const component = shallow(
         <HelloWorldList />
     );
+/*    it('renders without crashing', () => {
+        const div = document.createElement('div');
+        ReactDOM.render(<HelloWorldList />, div);
+    });*/
+
 
     it('renders and matches our snapshot', () => {
         const component = renderer.create(

@@ -5,6 +5,7 @@
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.24.0",
+    "babel-jest": "^19.0.0",
     "babel-loader": "^6.4.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
@@ -16,6 +17,7 @@
     "del-cli": "^0.2.1",
     "enzyme": "^2.8.2",
     "html-webpack-plugin": "^2.28.0",
+    "jest": "^19.0.2",
     "open-browser-webpack-plugin": "^0.0.5",
     "path": "^0.12.7",
     "react-addons-test-utils": "^15.5.1",
@@ -43,6 +45,8 @@
     "build-prod": "set NODE_ENV=production node_modules/.bin/webpack –config ./webpack.config.prod.js --progress",
     "execute": "node dist/bundle.js",
     "//start": "npm run build -s && npm run execute -s",
-    "start": "yarn install && npm run build && webpack-dev-server"
+    "start": "yarn install && npm run build && webpack-dev-server",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
   }
 }

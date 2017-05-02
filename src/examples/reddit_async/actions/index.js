@@ -26,6 +26,7 @@ export const receivePosts = (reddit, json) => ({
   receivedAt: Date.now()
 })
 
+//http://blog.isquaredsoftware.com/2016/10/idiomatic-redux-why-use-action-creators/
 const fetchPosts = reddit => dispatch => {
   dispatch(requestPosts(reddit))
   return fetch(`https://www.reddit.com/r/${reddit}.json`)

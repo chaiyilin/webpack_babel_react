@@ -1,5 +1,9 @@
-import { Model } from 'redux-orm';
+import { ValidatingModel } from 'redux-orm';
+import PropTypes from 'prop-types';
 
-export class Product extends Model {
+export class PricingRule extends ValidatingModel {
 }
-Product.modelName = 'Product';
+PricingRule.modelName = 'PricingRule';
+PricingRule.fields = {
+    product: fk('Product', 'pricingRules')
+};

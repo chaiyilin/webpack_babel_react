@@ -30,6 +30,7 @@
     "antd": "^2.9.1",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
+    "material-ui": "^0.18.0",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
     "react-grid-layout": "^0.14.6",
@@ -37,7 +38,9 @@
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
     "redux-logger": "^3.0.1",
-    "redux-thunk": "^2.2.0"
+    "redux-orm": "^0.9.0-rc.3",
+    "redux-thunk": "^2.2.0",
+    "reselect": "^3.0.0"
   },
   "scripts": {
     "prebuild": "del-cli dist -f",

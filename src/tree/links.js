@@ -14,6 +14,11 @@ export default
             {
                 title:'redux asyn',
                 example:'reduxAsyn'
+            },
+            ,
+            {
+                title:'Checkout Demo',
+                example:'checkout'
             }
         ]
     }

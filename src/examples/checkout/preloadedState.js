@@ -1,4 +1,4 @@
-let store = {
+let preloadedState = {
     products: [
         {
             id: 1,
@@ -60,23 +60,25 @@ let store = {
     customers: [
         {
             id: 1,
-            name: 'Unilever',
+            username: 'Unilever',
             pricingRules: [1]
         },
         {
             id: 2,
-            name: 'Apple',
+            username: 'Apple',
             pricingRules: [2]
         },
         {
             id: 3,
-            name: 'Nike',
+            username: 'Nike',
             pricingRules: [3]
         },
         {
             id: 4,
-            name: 'Ford',
+            username: 'Ford',
             pricingRules: [4,5,6]
         }
     ]
-}
+};
+
+export default preloadedState

@@ -3,8 +3,7 @@ import {connect} from 'react-redux';
 import Paper from 'material-ui/Paper';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
-import AppBar from 'material-ui/AppBar';
-import {loginRequest, toggleTimedOutMessage} from '../actions/authentication';
+import {login} from '../actions/actions';
 
 class Login extends React.Component {
 
@@ -47,21 +46,8 @@ class Login extends React.Component {
 
   validateForm() {
     if (this.validateRequired('username') && this.validateRequired('password')) {
-      this.login();
+      this.props.login();
     }
-  }
-
-  login() {
-    const {dispatch} = this.props;
-    dispatch(loginRequest(this.state.username, this.state.password)).catch(error => {
-      if (error.response.status === 401) {
-        this.setState({
-          ...this.state,
-          usernameError: 'username and password do not match',
-          password: ''
-        })
-      }
-    });
   }
 
   onSubmit(e) {
@@ -82,7 +68,6 @@ class Login extends React.Component {
           <div style={fieldsContainerStyle}>
             <TextField floatingLabelText="User Name"
                        value={this.state.username}
-                       disabled={ui.blockEntry}
                        onChange={this.usernameChange}
                        onKeyDown={this.onSubmit}
                        errorText={this.state.usernameError}/>
@@ -90,12 +75,10 @@ class Login extends React.Component {
                        value={this.state.password}
                        onChange={this.passwordChange}
                        onKeyDown={this.onSubmit}
-                       disabled={ui.blockEntry}
                        errorText={this.state.passwordError}/>
-            <RaisedButton label={ui.blockEntry ? 'Please wait...' : 'Login'}
+            <RaisedButton label='Login'
                           labelPosition={'before'}
                           fullWidth={true}
-                          disabled={ui.blockEntry}
                           primary={true}
                           style={buttonStyle}
                           onTouchTap={this.validateForm}/>
@@ -149,4 +132,4 @@ Login.defaultProps = {
   }
 };
 
-export default connect(mapStateToProps)(Login);
+export default connect(mapStateToProps,{login})(Login);

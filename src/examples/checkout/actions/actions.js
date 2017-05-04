@@ -14,7 +14,7 @@ export const updateAdAmount = (product, amount) => {
     };
 };
 
-export const authLogin = (username, password) => {
+export const login = (username, password) => {
     return {
         type: AUTH_LOGIN,
         payload: {
@@ -24,17 +24,10 @@ export const authLogin = (username, password) => {
     };
 };
 
-export const authLogout = () => {
+export const logout = () => {
     return {
         type: AUTH_LOGOUT,
         payload: {
         }
     };
 };
-
-const login = (username,password) => dispatch => {
-    dispatch(authLogin(username, password));
-    return fetch(`https://www.reddit.com/r/${reddit}.json`)
-        .then(response => response.json())
-        .then(json => dispatch(receivePosts(reddit, json)))
-}

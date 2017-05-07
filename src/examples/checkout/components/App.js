@@ -1,42 +1,40 @@
-import React,{Component} from 'react'
+import React,{Component} from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import HeadBar from './headbar';
+//import HeadBar from './headbar';
 import Login from './login';
+import Products from './Products';
 
 class App extends Component {
-
-    componentWillMount() {
-        this.props.dispatch(checkAuth());
-    }
 
     constructor(props) {
         super(props);
     }
 
     render() {
-        const { authentication } = this.props;
+        const { currentUser } = this.props;
         const app = (
             <div>
-                <HeadBar/>
-                {this.props.children}
+                {/*<HeadBar/>*/}
+                <Products/>
             </div>
         );
 
         return (
-            authentication.authenticated ? app : (<Login/>)
+            currentUser ? app : (<Login/>)
         )
     }
 }
 
 const mapStateToProps = state => {
-    const { authentication } = state;
+    const { currentUser } =  state;
     return {
-        authentication
+        currentUser
     }
 };
 
-App.propTypes = {
+/*App.propTypes = {
     authentication: PropTypes.object.isRequired
-};
+};*/
 
 export default connect(mapStateToProps)(App);

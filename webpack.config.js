@@ -5,7 +5,9 @@ var OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
     //webpack
-    devtool: 'eval-source-map',
+    //https://webpack.js.org/configuration/devtool/
+    //https://github.com/webpack/webpack/issues/2145
+    devtool: 'cheap-module-eval-source-map',
     entry: path.join(__dirname + '/src/index.js'),
     output: {
         path: path.join(__dirname + '/dist'),

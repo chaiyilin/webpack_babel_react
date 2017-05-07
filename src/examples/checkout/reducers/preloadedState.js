@@ -1,4 +1,5 @@
 let preloadedState = {
+    currentUser:null,
     products: [
         {
             id: 1,
@@ -23,7 +24,7 @@ let preloadedState = {
         {
             id: 1,
             productId: 1,
-            desc: 'You have 3 for 2 deals on Classic Ads',
+            desc: 'You have discount: 3 for 2 deals on Classic Ads',
             applied:false
         },
         {
@@ -35,13 +36,13 @@ let preloadedState = {
         {
             id: 3,
             productId: 3,
-            desc: 'You have discount on Premium Ads when 4 or more are purchased. The price drops to $299.99 per ad',
+            desc: 'You have discount on Premium Ads when 4 or more are purchased. The price drops to $379.99 per ad',
             applied:false
         },
         {
             id: 4,
             productId: 1,
-            desc: 'You have 5 for 4 deal on Classic Ads',
+            desc: 'You have discount: 5 for 4 deal on Classic Ads',
             applied:false
         },
         {

@@ -8,7 +8,7 @@ import ActionHome from 'material-ui/svg-icons/action/home.js';
 import Popover from 'material-ui/Popover/Popover';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import {grey50} from 'material-ui/styles/colors';
-import {logoutRequest} from '../actions/authentication';
+import {logout} from '../actions';
 import UserProfileCard from './UserProfileCard'
 
 export class HeadBar extends React.Component {
@@ -83,4 +83,4 @@ HeadBar.propTypes = {
   dispatch: PropTypes.func.isRequired
 };
 
-export default connect(mapStateToProps)(HeadBar);
+export default connect(mapStateToProps,{logout})(HeadBar);

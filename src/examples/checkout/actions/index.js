@@ -4,11 +4,11 @@ import {
     AUTH_LOGOUT
 } from './actionTypes';
 
-export const updateAdAmount = (product, amount) => {
+export const updateAdAmount = (productId, amount) => {
     return {
         type: UPDATE_AD_AMOUNT,
         payload: {
-            product,
+            productId,
             amount
         }
     };

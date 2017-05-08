@@ -2,7 +2,7 @@
 
 We are interested in seeing your coding and problem solving style, so we would love if you could complete this open code test.
 
-For the purpose of this exercise, SEEK is in the process of rewriting its job ads checkout system. You have been assigned to build this new system.
+For the purpose of this exercise, we is in the process of rewriting its job ads checkout system. You have been assigned to build this new system.
 
 We want to offer different products to recruiters:
 - **Classic Ad**, offers the most basic level of advertisement

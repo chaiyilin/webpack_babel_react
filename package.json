@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-core": "^6.24.0",
     "babel-jest": "^19.0.0",
     "babel-loader": "^6.4.0",
@@ -29,7 +30,6 @@
   "dependencies": {
     "antd": "^2.9.1",
     "axios": "^0.16.1",
-    "babel-cli": "^6.24.1",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.4",
     "material-ui": "^0.18.0",
@@ -40,6 +40,7 @@
     "react-router-dom": "^4.1.1",
     "react-tap-event-plugin": "^2.0.1",
     "redux": "^3.6.0",
+    "redux-form": "^6.7.0",
     "redux-logger": "^3.0.1",
     "redux-orm": "^0.9.0-rc.3",
     "redux-thunk": "^2.2.0",
@@ -55,6 +56,6 @@
     "start": "yarn install && npm run build && webpack-dev-server",
     "test": "jest",
     "test:watch": "npm test -- --watch",
-    "single": "babel-node ./src/examples/reactive/rxjs-functions-with-examples/1_fetch.js"
+    "single": "babel-node ./src/examples/reactive/rxjs-functions-with-examples/2_axio.js"
   }
 }

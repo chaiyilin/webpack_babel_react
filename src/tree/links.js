@@ -16,8 +16,8 @@ export default
                 example: 'reduxAsyn'
             },
             {
-                title: 'Checkout Demo',
-                example: 'checkout'
+                title: 'redux form',
+                example: 'reduxForm'
             }
         ]
     }

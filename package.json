@@ -32,6 +32,7 @@
     "axios": "^0.16.1",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
+    "keymirror": "^0.1.1",
     "lodash": "^4.17.4",
     "material-ui": "^0.18.0",
     "react": "^15.5.3",

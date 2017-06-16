@@ -1,1 +1,0 @@
-config node with babel-register.PNG. then restart intellij

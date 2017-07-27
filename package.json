@@ -28,7 +28,7 @@
     "webpack-dev-server": "^2.4.2"
   },
   "dependencies": {
-    "antd": "^2.9.1",
+    "antd": "^2.12.2",
     "axios": "^0.16.1",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
@@ -55,7 +55,7 @@
     "build-prod": "set NODE_ENV=production node_modules/.bin/webpack –config ./webpack.config.prod.js --progress",
     "execute": "node dist/bundle.js",
     "//start": "npm run build -s && npm run execute -s",
-    "start": "yarn install && npm run build && webpack-dev-server",
+    "start": "webpack-dev-server",
     "test": "jest",
     "test:watch": "npm test -- --watch",
     "single": "babel-node ./src/examples/reactive/rxjs-functions-with-examples/2_axio.js"

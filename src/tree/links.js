@@ -9,7 +9,16 @@ export default
                 },
                 {
                     title: 'Refs',
-                    example: 'refs'
+                    children: [
+                        {
+                            title: 'Adding a Ref to a DOM Element',
+                            example: 'RefDom'
+                        },
+                        {
+                            title: 'Adding a Ref to a Class Component',
+                            example: 'RefClass'
+                        }
+                    ]
                 },
                 {
                     title: 'redux todo',
@@ -22,6 +31,10 @@ export default
                 {
                     title: 'redux form',
                     example: 'reduxForm'
+                },
+                {
+                    title: 'asyn',
+                    example: 'Asyn'
                 }
             ]
         }

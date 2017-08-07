@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class RefsDemo extends React.Component {
+export default class RefDom extends React.Component {
 
 	focus = () => {
 		// Explicitly focus the text input using the raw DOM API

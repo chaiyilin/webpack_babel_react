@@ -7,6 +7,42 @@ export default
                     title: 'hello world',
                     example: 'helloWorld'
                 },
+
+                {
+                    title: 'component syntax',
+                    children: [
+                        {
+                            title: 'by function',
+                            example: 'NoPropsAtAll'
+                        },
+                        {
+                            title: 'by class',
+                            example: 'PassingObject'
+                        },
+                        {
+                            title: 'by arrow',
+                            example: 'PassingOnlyRequiredProperties'
+                        }
+                    ]
+                },
+
+                {
+                    title: 'Passing props',
+                    children: [
+                        {
+                            title: 'No props at all',
+                            example: 'NoPropsAtAll'
+                        },
+                        {
+                            title: 'Passing object',
+                            example: 'PassingObject'
+                        },
+                        {
+                            title: 'Passing only required properties',
+                            example: 'PassingOnlyRequiredProperties'
+                        }
+                    ]
+                },
                 {
                     title: 'Refs',
                     children: [
@@ -35,7 +71,46 @@ export default
                 {
                     title: 'asyn',
                     example: 'Asyn'
-                }
+                },
+                {
+                    title: 'HOC',
+                    children: [
+                        {
+                            title: 'Props Proxy',
+                            children: [
+                                {
+                                    title: 'Manipulating props',
+                                    example: 'ManipulatingProps'
+                                },
+                                {
+                                    title: 'Accessing the instance via Refs',
+                                    example: 'AccessingTheInstanceViaRefs'
+                                },
+                                {
+                                    title: 'Abstracting State',
+                                    example: 'AbstractingState'
+                                },
+                                {
+                                    title: 'Wrapping the WrappedComponent with other elements',
+                                    example: 'WrappingTheWrappedComponentWithOtherElements'
+                                },
+                            ]
+                        },
+                        {
+                            title: 'Inheritance Inversion',
+                            children: [
+                                {
+                                    title: 'Props Proxy',
+                                    example: 'RefDom'
+                                },
+                                {
+                                    title: 'Inheritance Inversion',
+                                    example: 'RefDom'
+                                },
+                            ]
+                        },
+                    ]
+                },
             ]
         }
     ];

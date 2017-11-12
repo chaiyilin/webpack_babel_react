@@ -35,12 +35,16 @@ module.exports = {
         }),
         //new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin(),
-        new OpenBrowserPlugin({ url: 'http://localhost:8080',browser:'chrome' })
+        new OpenBrowserPlugin({ url: 'http://localhost:8080', browser: 'chrome' })
     ],
     //webpack-dev-server
     devServer: {
-        contentBase: path.join(__dirname + "/dist"),
-        historyApiFallback: true,
-        inline: true
+        proxy: {
+            '/api': {
+                target: 'http://alintacodingtest.azurewebsites.net',
+                secure: false,
+                changeOrigin: true
+            }
+        }
     }
 };

@@ -1,0 +1,1 @@
+https://reallifeprogramming.com/how-to-structure-components-in-react-54fc43e71546

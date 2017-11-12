@@ -1,1 +1,2 @@
 https://codepen.io/hesmaili95/pen/wGzodM
+https://www.bignerdranch.com/blog/destroy-all-classes-turn-react-components-inside-out-with-functional-programming/?utm_campaign=React%2BNewsletter&utm_medium=email&utm_source=React_Newsletter_78
